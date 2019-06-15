@@ -25,6 +25,9 @@ class Game
       'scissors': ['paper']
     }
   end
+
+  # IDEAS
+  # add function to tally score - comp wins / player wins / ties
 end
 
 start = Game.new('paper')
