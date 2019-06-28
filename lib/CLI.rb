@@ -7,10 +7,8 @@ class RockPaperScissors::CLI
     input = gets.chomp.downcase
     if input == "yes" || input == "y"
       play_game
-      break
-    elsif input == "no" || input = "n"
+    elsif input == "no" || input == "n"
       puts "Thank you for visiting!"
-      break
     else
       puts "Invalid input. Please try again."
     end
