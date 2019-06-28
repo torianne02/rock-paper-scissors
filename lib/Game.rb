@@ -1,4 +1,4 @@
-class Game
+class RockPaperScissors::Game
   def initialize(move)
     @move = move.downcase
   end
