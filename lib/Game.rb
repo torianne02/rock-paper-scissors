@@ -1,6 +1,6 @@
 class RockPaperScissors::Game
   def initialize(move)
-    @move = move.downcase
+    @move = move
   end
 
   def comp_move
@@ -29,6 +29,3 @@ class RockPaperScissors::Game
   # IDEAS
   # add function to tally score - comp wins / player wins / ties
 end
-
-# start = Game.new('paper')
-# start.winner_is
