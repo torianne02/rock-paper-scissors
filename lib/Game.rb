@@ -14,7 +14,7 @@ class RockPaperScissors::Game
     elsif rule_engine[@move.to_sym].include?(comp_move)
       puts 'You win!'
     else
-      puts 'Tie'
+      puts 'Tie game!'
     end
   end
 
