@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "rock_paper_scissors"
+
+require "irb"
+IRB.start(__FILE__)
