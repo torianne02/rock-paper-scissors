@@ -30,5 +30,5 @@ class Game
   # add function to tally score - comp wins / player wins / ties
 end
 
-start = Game.new('paper')
-start.winner_is
+# start = Game.new('paper')
+# start.winner_is
