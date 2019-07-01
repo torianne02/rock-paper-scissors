@@ -1,17 +1,20 @@
 class RockPaperScissors::Game
   def initialize(move)
     @move = move
+    @c_move = comp_move
   end
 
   def comp_move
-    options = ['rock', 'paper', 'scissors'] # rule_engine.keys
-    options.sample # OR options.shuffle[0]
+    options = ['rock', 'paper', 'scissors']
+    options.sample
   end
 
   def winner_is
-    if rule_engine[comp_move.to_sym].include?(@move)
+    puts "The computer played #{@c_move}."
+
+    if rule_engine[@c_move.to_sym].include?(@move)
       puts 'Computer wins!'
-    elsif rule_engine[@move.to_sym].include?(comp_move)
+    elsif rule_engine[@move.to_sym].include?(@c_move)
       puts 'You win!'
     else
       puts 'Tie game!'
@@ -25,7 +28,4 @@ class RockPaperScissors::Game
       'scissors': ['paper']
     }
   end
-
-  # IDEAS
-  # add function to tally score - comp wins / player wins / ties
 end
