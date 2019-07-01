@@ -6,6 +6,31 @@ class RockPaperScissors::CLI
     @@c_count = 0
     @@p_count = 0
 
+    puts "
+          _______
+      ---'   ____)
+            (_____)
+            (_____)
+            (____)
+      ---.__(___)
+
+      -------------------
+          _______
+      ---'   ____)____
+                ______)
+                _______)
+               _______)
+      ---.__________)
+
+      -------------------
+          _______
+      ---'   ____)____
+                ______)
+             __________)
+             (____)
+      ---.__(___)
+    "
+
     puts "Would you like to play a game of rock, paper, scissors?"
 
     # checks for valid input from user
@@ -25,6 +50,7 @@ class RockPaperScissors::CLI
   end
 
   def play_game
+    puts "------------------------------------------------------"
     puts "Please choose your move: rock, paper, or scissors?"
 
     # checks for valid input from user
@@ -53,6 +79,7 @@ class RockPaperScissors::CLI
   end
 
   def play_again?
+    puts "------------------------------------------------------"
     puts "Would you like to play again?"
 
     # checks for valid input from user
