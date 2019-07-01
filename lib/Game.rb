@@ -10,14 +10,12 @@ class RockPaperScissors::Game
   end
 
   def winner_is
-    puts "The computer played #{@c_move}."
-
     if rule_engine[@c_move.to_sym].include?(@move)
-      puts 'Computer wins!'
+      return "The computer played #{@c_move}. Computer wins!"
     elsif rule_engine[@move.to_sym].include?(@c_move)
-      puts 'You win!'
+      return "The computer played #{@c_move}. You win!"
     else
-      puts 'Tie game!'
+      return "The computer played #{@c_move}. Tie game!"
     end
   end
 
