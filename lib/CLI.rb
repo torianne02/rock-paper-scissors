@@ -2,6 +2,9 @@ require_relative '../lib/rock_paper_scissors/version.rb'
 
 class RockPaperScissors::CLI
   def call
+    @@c_count = 0
+    @@p_count = 0
+
     puts "Would you like to play a game of rock, paper, scissors?"
 
     while true
@@ -25,7 +28,7 @@ class RockPaperScissors::CLI
     while true
       input = gets.chomp.downcase
       options = ["rock", "paper", "scissors"]
-      
+
       if options.any? {|o| input.include?(o)}
         game = RockPaperScissors::Game.new(input)
         break;
@@ -34,7 +37,14 @@ class RockPaperScissors::CLI
       end
     end
 
+    if game.winner_is.include?("Computer wins!")
+      @@c_count += 1
+    elsif game.winner_is.include?("You win!")
+      @@p_count += 1
+    end
+
     puts game.winner_is
+    puts "--- Computer : #{@@c_count} - You : #{@@p_count} ---"
     play_again?
   end
 
