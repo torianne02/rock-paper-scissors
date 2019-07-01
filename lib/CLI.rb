@@ -2,11 +2,13 @@ require_relative '../lib/rock_paper_scissors/version.rb'
 
 class RockPaperScissors::CLI
   def call
+    # class variables to keep count of wins
     @@c_count = 0
     @@p_count = 0
 
     puts "Would you like to play a game of rock, paper, scissors?"
 
+    # checks for valid input from user
     while true
       input = gets.chomp.downcase
 
@@ -25,6 +27,7 @@ class RockPaperScissors::CLI
   def play_game
     puts "Please choose your move: rock, paper, or scissors?"
 
+    # checks for valid input from user
     while true
       input = gets.chomp.downcase
       options = ["rock", "paper", "scissors"]
@@ -37,6 +40,7 @@ class RockPaperScissors::CLI
       end
     end
 
+    # checks who won - adds 1 to their count
     if game.winner_is.include?("Computer wins!")
       @@c_count += 1
     elsif game.winner_is.include?("You win!")
@@ -51,6 +55,7 @@ class RockPaperScissors::CLI
   def play_again?
     puts "Would you like to play again?"
 
+    # checks for valid input from user
     while true
       input = gets.chomp.downcase
 

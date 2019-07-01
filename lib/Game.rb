@@ -10,8 +10,10 @@ class RockPaperScissors::Game
   end
 
   def winner_is
+    # check if @c_move as key in rule engine includes @move as value
     if rule_engine[@c_move.to_sym].include?(@move)
       return "The computer played #{@c_move}. Computer wins!"
+    # check if @move as key in rule engine includes @c_move as value
     elsif rule_engine[@move.to_sym].include?(@c_move)
       return "The computer played #{@c_move}. You win!"
     else
